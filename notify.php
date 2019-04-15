@@ -32,7 +32,7 @@ $trade = json_decode($trade);
 if ($config['enable_bot']) {
     $data = array(
         'chat_id' => $config['tg_chatid'],
-        'text' => "\[云讨饭\]\r\n*$trade->name* 刚给咱捐了 *$trade->amount* 元呢（",
+        'text' => "\[云讨饭]\r\n*$trade->name* 刚给咱捐了 *$trade->amount* 元呢（",
         'disable_web_page_preview' => true,
         'parse_mode' => 'markdown',
         'reply_markup' => json_encode(array(
