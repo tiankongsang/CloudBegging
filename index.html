@@ -169,6 +169,7 @@
                                 $('#qr_div').show('normal');
                                 if (PayMethod == 'WEPAY_JSAPI' || PayMethod == 'WEPAY_QR') {
                                     $('#qrcode_head').text('请使用微信扫描二维码进行支付');
+                                    obj.data = "https://api.woomai.net/jump?url=" + obj.data;
                                 } else {
                                     $('#qrcode_head').text('请使用支付宝扫描二维码进行支付');
                                 }
