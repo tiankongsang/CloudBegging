@@ -5,7 +5,6 @@ function CreateOrder($order,$money,$notify_url,$return_url,$pay_type)
     require './config.php';
     $parameter = array(
         'appId' => $config['app_id'],
-        'appSecret' => $config['app_secret'],
         'merchantTradeNo' => $order,
         'totalFee' => $money,
         'notifyUrl' => $notify_url,
