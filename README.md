@@ -1,5 +1,5 @@
 # CloudBegging
-云讨饭，基于 [TrimePay](https://portal.trimepay.com/#/auth/register/196)
+云讨饭 for [TrimePay](https://portal.trimepay.com/#/auth/register/196)
 
 ## 环境
 开发环境 PHP7.2, 好像5.4+都可以的样子
