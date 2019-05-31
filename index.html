@@ -87,9 +87,8 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">支付方式</span>
                                 </div>
-                                <select class="form-control" id="select_method" value="ALIPAY_WAP">
-                                    <option value="ALIPAY_WAP">支付宝</option>
-                                    <option value="WEPAY_QR">微信支付</option>
+                                <select class="form-control" id="select_method" value="ALIPAY_F2F">
+                                    <option value="ALIPAY_F2F">支付宝</option>
                                 </select>
                             </div>
 
@@ -167,11 +166,7 @@
                             obj = JSON.parse(data);
                             if (obj.ok == true) {
                                 $('#qr_div').show('normal');
-                                if (PayMethod == 'WEPAY_JSAPI' || PayMethod == 'WEPAY_QR') {
-                                    $('#qrcode_head').text('请使用微信扫描二维码进行支付');
-                                } else {
-                                    $('#qrcode_head').text('请使用支付宝扫描二维码进行支付');
-                                }
+                                $('#qrcode_head').text('请使用支付宝扫描二维码进行支付');
                                 $('#qrcode_div').qrcode(obj.data);
                             } else {
                                 alert(obj.msg);

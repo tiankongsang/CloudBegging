@@ -1,6 +1,6 @@
 <?php
 
-# TrimePay 应用信息
+# 应用信息
 $config['app_id'] = '';
 $config['app_secret'] = '';
 

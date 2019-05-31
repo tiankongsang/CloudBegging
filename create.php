@@ -20,7 +20,7 @@ $type = $_POST['type'];
 if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
     $ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
 } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    $ip = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
 } else {
     $ip = $_SERVER['REMOTE_ADDR'];
 }
@@ -48,7 +48,7 @@ file_put_contents("./data/$tradeno.json", json_encode(array(
 
 $rsp = CreateOrder(
     $tradeno,
-    $amount*100,
+    $amount,
     $config['base_url'].'/notify.php',
     $config['base_url'].'/thanks.html',
     $type

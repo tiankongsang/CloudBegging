@@ -2,20 +2,10 @@
 require './config.php';
 require './functions.php';
 
-if (!isset(
-    $_POST['payStatus'],
-    $_POST['payFee'],
-    $_POST['callbackTradeNo'],
-    $_POST['payType'],
-    $_POST['merchantTradeNo'],
-    $_POST['sign']
-)) exit('bad request');
-
 $sign = Sign(array(
-    'payStatus' => $_POST['payStatus'],
-    'payFee' => $_POST['payFee'],
-    'callbackTradeNo' => $_POST['callbackTradeNo'],
-    'payType' => $_POST['payType'],
+    'type' => $_POST['type'],
+    'amount' => $_POST['amount'],
+    'gatewayTradeNo' => $_POST['gatewayTradeNo'],
     'merchantTradeNo' => $_POST['merchantTradeNo']
 ));
 if($_POST['sign'] != $sign) exit('invalid notify');
