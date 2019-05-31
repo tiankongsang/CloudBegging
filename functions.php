@@ -15,7 +15,7 @@ function CreateOrder($order,$money,$notify_url,$return_url,$pay_type)
 
     $parameter = http_build_query($parameter);
 
-    $request = HttpPost('https://api.trimepay.com/gateway/pay/go', $parameter);
+    $request = HttpPost('https://api.payease.io/gateway/pay/go', $parameter);
     if($request === false) return false;
     else return json_decode($request); 
 }
