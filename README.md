@@ -8,7 +8,7 @@
 栗子：
 ```
 cd /www/wwwroot/donate.example.com/
-git clone -b master https://github.com/WooMai/CloudBegging ./tmp
+git clone -b trimepay https://github.com/WooMai/CloudBegging ./tmp
 mv ./tmp/.git ./
 git reset --hard HEAD
 rm -rf ./tmp
